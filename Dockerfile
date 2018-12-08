@@ -8,4 +8,4 @@ RUN mkdir /www
 
 WORKDIR /www
 
-RUN [ "/usr/local/bin/hugo" ]
+CMD [ "/usr/local/bin/hugo" ]
