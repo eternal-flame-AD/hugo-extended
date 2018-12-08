@@ -6,5 +6,5 @@ git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install --tags extended
 cd ../
-cp $GOPATH/bin/hugo /root/artifacts
+cp \$GOPATH/bin/hugo /root/artifacts
 CMD
