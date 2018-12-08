@@ -1,3 +1,5 @@
+language: generic
+
 services:
   - docker
 
@@ -8,8 +10,6 @@ script:
 deploy:
   provider: script
   skip_cleanup: true
-  script:
-    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker push efad/hugo-extended
+  script: sh deploy.sh
   on:
     branch: master
