@@ -1,0 +1,14 @@
+services:
+  - docker
+
+script:
+  - make
+  - docker build -t efad/hugo-extended .
+
+deploy:
+  provider: script
+  script:
+    - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+    - docker push efad/hugo-extended
+  on:
+    branch: master
