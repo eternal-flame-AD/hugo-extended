@@ -1,6 +1,6 @@
 mkdir artifacts
 docker run -i --rm -v ${PWD}/artifacts:/root/artifacts golang:1.11-alpine sh << CMD
-apk add git
+apk add git gcc
 cd /root
 git clone https://github.com/gohugoio/hugo.git
 cd hugo
